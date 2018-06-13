@@ -15,7 +15,7 @@ const NumberBoxes = ({ children, className, ...rest }) => (
     </ul>
 );
 
-NumberBoxes.NumberBox = ({ title, number, unit, text, className, ...rest }) => (
+NumberBoxes.NumberBox = ({ title, number, unit, text, className, test = 'defaultValue', ...rest }) => (
     <li
         className={classnames('number-box', {
             [className]: className

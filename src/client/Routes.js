@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import LayoutPage from './pages/LayoutPage';
 import ComponentsPage from './pages/ComponentsPage';
 import ComponentsByTypePage from './pages/ComponentsByTypePage';
+import ComponentsByNamePage from './pages/ComponentsByNamePage';
 import ContributingPage from './pages/ContributingPage';
 import DownloadPage from './pages/DownloadPage';
 import ImageAssetsPage from './pages/ImageAssetsPage';
@@ -80,6 +81,7 @@ const Routes = (props) =>
         <Route exact path="/layout" component={LayoutPage} />
         <Route exact path="/components" component={ComponentsPage} />
         <Route exact path="/components/:componentType" component={ComponentsByTypePage} />
+        <Route exact path="/components/:componentType/:componentName" component={ComponentsByNamePage} />
         <Route exact path="/image-assets" component={ImageAssetsPage} />
         <Route exact path="/contributing" component={ContributingPage} />
         <Route exact path="/download" component={DownloadPage} />
