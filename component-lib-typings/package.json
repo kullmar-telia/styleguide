@@ -1,0 +1,20 @@
+{
+    "name": "@telia/styleguide-typings",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "scripts": {
+        "start": "node src/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "react-to-typescript-definitions": "^1.0.0"
+    },
+    "dependencies": {
+        "mkdirp": "^0.5.1",
+        "require-context": "^1.1.0"
+    }
+}
