@@ -25,6 +25,10 @@ export default class PageHeader extends React.Component {
         logoTitle: PropTypes.string.isRequired,
         logoImageDesktopPath: PropTypes.string.isRequired,
         logoImageDesktopPathInverted: PropTypes.string.isRequired,
+        loginLink: PropTypes.string,
+        onLoginClick: PropTypes.func,
+        logoutLink: PropTypes.string,
+        onLogoutClick: PropTypes.func,
     };
     constructor(props) {
         super(props);
@@ -64,7 +68,11 @@ export default class PageHeader extends React.Component {
                     isLoggedIn={this.props.isLoggedIn}
                     menuSelectedTabIndex={this.state.menuSelectedTabIndex}
                     onTabSelect={this.onTabSelect}
-                    showButtons={this.props.showButtons} />
+                    showButtons={this.props.showButtons}
+                    loginLink={this.props.loginLink}
+                    onLoginClick={this.props.onLoginClick}
+                    logoutLink={this.props.logoutLink}
+                    onLogoutClick={this.props.onLogoutClick} />
                 <div className="page-header__site-nav">
                     <button className="page-header__menu-button page-header__icon-box" onClick={this.openMenu} aria-expanded={this.state.menuIsExpanded} aria-controls={this.props.menuId || 'page-header-menu'} aria-pressed={this.state.menuIsExpanded}>
                         <i className={`${menuIconClass} page-header__icon-box-icon`} />
@@ -82,7 +90,7 @@ export default class PageHeader extends React.Component {
                             <span className="page-header__cart-item-count">{this.props.cartItemCount}</span>
                         </a> : null}
                     {!this.props.isLoggedIn &&
-                        <a className="page-header__log-in-button" href="#">
+                        <a className="page-header__log-in-button" href={this.props.loginLink} onClick={this.props.onLoginClick} >
                             <i className="page-header__log-in-button-icon page-header__icon-box-icon" />
                             <span className="page-header__log-in-button-text">Logg inn</span>
                         </a>}
