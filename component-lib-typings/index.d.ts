@@ -1,36 +1,19 @@
 
 declare module '@telia/styleguide' {
     import * as React from 'react';
-
-
-
-
-    interface AlertTextComponent extends React.ComponentClass {}
-    export declare const AlertText: AlertTextComponent;
-
-
-
-
+    
+interface zz_AlertTextComponent extends React.ComponentClass {}
+declare const AlertText: zz_AlertTextComponent;
 
     export interface BoxProps {
     }
-
     export class Box extends React.Component<BoxProps, any> {
         render(): JSX.Element;
-
     }
-
-
-
-
-    export type ButtonType = "button" | "reset" | "submit";
-
-    export type ButtonKind = "primary" | "cancel";
-
-    export type ButtonMargin = "top" | "bottom";
-
-    export type ButtonSize = "small";
-
+    type ButtonType = "button" | "reset" | "submit";
+    type ButtonKind = "primary" | "cancel";
+    type ButtonMargin = "top" | "bottom";
+    type ButtonSize = "small";
     export interface ButtonProps {
         /**
          * A button can have a text.
@@ -67,25 +50,13 @@ declare module '@telia/styleguide' {
          */
         isDisabled?: boolean;
     }
+interface zz_ButtonComponent extends React.ComponentClass<ButtonProps> {}
+declare const Button: zz_ButtonComponent;
 
+interface zz_CaptionComponent extends React.ComponentClass {}
+declare const Caption: zz_CaptionComponent;
 
-    interface ButtonComponent extends React.ComponentClass<ButtonProps> {}
-    export declare const Button: ButtonComponent;
-
-
-
-
-
-
-    interface CaptionComponent extends React.ComponentClass {}
-    export declare const Caption: CaptionComponent;
-
-
-
-
-
-    export type ContainerSize = "small" | "medium" | "large";
-
+    type ContainerSize = "small" | "medium" | "large";
     export interface ContainerProps {
         size?: ContainerSize;
         noMargin?: boolean;
@@ -96,14 +67,8 @@ declare module '@telia/styleguide' {
         whiteBg?: boolean;
         overlappingFullWidthImage?: boolean;
     }
-
-
-    interface ContainerComponent extends React.ComponentClass<ContainerProps> {}
-    export declare const Container: ContainerComponent;
-
-
-
-
+interface zz_ContainerComponent extends React.ComponentClass<ContainerProps> {}
+declare const Container: zz_ContainerComponent;
 
     export interface DescriptionListProps {
         /**
@@ -115,30 +80,14 @@ declare module '@telia/styleguide' {
          */
         wrapByTwo?: boolean;
     }
+interface zz_DescriptionListComponent extends React.ComponentClass<DescriptionListProps> {}
+declare const DescriptionList: zz_DescriptionListComponent;
 
+interface zz_FullWidthTableComponent extends React.ComponentClass {}
+declare const FullWidthTable: zz_FullWidthTableComponent;
 
-    interface DescriptionListComponent extends React.ComponentClass<DescriptionListProps> {}
-    export declare const DescriptionList: DescriptionListComponent;
-
-
-
-
-
-
-    interface FullWidthTableComponent extends React.ComponentClass {}
-    export declare const FullWidthTable: FullWidthTableComponent;
-
-
-
-
-
-
-    interface HeadingComponent extends React.ComponentClass {}
-    export declare const Heading: HeadingComponent;
-
-
-
-
+interface zz_HeadingComponent extends React.ComponentClass {}
+declare const Heading: zz_HeadingComponent;
 
     export interface HorizontalRuleProps {
         /**
@@ -146,58 +95,29 @@ declare module '@telia/styleguide' {
          */
         short?: any;
     }
+interface zz_HorizontalRuleComponent extends React.ComponentClass<HorizontalRuleProps> {}
+declare const HorizontalRule: zz_HorizontalRuleComponent;
 
-
-    interface HorizontalRuleComponent extends React.ComponentClass<HorizontalRuleProps> {}
-    export declare const HorizontalRule: HorizontalRuleComponent;
-
-
-
-
-
-    export type IconLinkKind = "download" | "linkedIn" | "twitter";
-
+    type IconLinkKind = "download" | "linkedIn" | "twitter";
     export interface IconLinkProps {
         /**
          * One of 'download', 'linkedIn' or 'twitter'.
          */
         kind?: IconLinkKind;
     }
+interface zz_IconLinkComponent extends React.ComponentClass<IconLinkProps> {}
+declare const IconLink: zz_IconLinkComponent;
 
-
-    interface IconLinkComponent extends React.ComponentClass<IconLinkProps> {}
-    export declare const IconLink: IconLinkComponent;
-
-
-
-
-
-
-    interface InputErrorComponent extends React.ComponentClass {}
-    export declare const InputError: InputErrorComponent;
-
-
-
-
+interface zz_InputErrorComponent extends React.ComponentClass {}
+declare const InputError: zz_InputErrorComponent;
 
     export interface LabelProps {
     }
-
     export class Label extends React.Component<LabelProps, any> {
         render(): JSX.Element;
-
     }
-
-
-
-
-
-    interface LinkComponent extends React.ComponentClass {}
-    export declare const Link: LinkComponent;
-
-
-
-
+interface zz_LinkComponent extends React.ComponentClass {}
+declare const Link: zz_LinkComponent;
 
     export interface ListProps {
         /**
@@ -217,14 +137,8 @@ declare module '@telia/styleguide' {
          */
         black?: boolean;
     }
-
-
-    interface ListComponent extends React.ComponentClass<ListProps> {}
-    export declare const List: ListComponent;
-
-
-
-
+interface zz_ListComponent extends React.ComponentClass<ListProps> {}
+declare const List: zz_ListComponent;
 
     export interface NumberBoxesProps {
         /**
@@ -232,39 +146,21 @@ declare module '@telia/styleguide' {
          */
         children?: React.ReactNode;
     }
+interface zz_NumberBoxesComponent extends React.ComponentClass<NumberBoxesProps> {}
+declare const NumberBoxes: zz_NumberBoxesComponent;
 
+interface zz_PagePebblesComponent extends React.ComponentClass {}
+declare const PagePebbles: zz_PagePebblesComponent;
 
-    interface NumberBoxesComponent extends React.ComponentClass<NumberBoxesProps> {}
-    export declare const NumberBoxes: NumberBoxesComponent;
-
-
-
-
-
-
-    interface PagePebblesComponent extends React.ComponentClass {}
-    export declare const PagePebbles: PagePebblesComponent;
-
-
-
-
-
-    export type ParagraphKind = "fineprint" | "preamble";
-
+    type ParagraphKind = "fineprint" | "preamble";
     export interface ParagraphProps {
         /**
          * One of 'fineprint' or 'preamble'.
          */
         kind?: ParagraphKind;
     }
-
-
-    interface ParagraphComponent extends React.ComponentClass<ParagraphProps> {}
-    export declare const Paragraph: ParagraphComponent;
-
-
-
-
+interface zz_ParagraphComponent extends React.ComponentClass<ParagraphProps> {}
+declare const Paragraph: zz_ParagraphComponent;
 
     export interface ProgressBarProps {
         value: number;
@@ -273,14 +169,8 @@ declare module '@telia/styleguide' {
         barColor?: string;
         disabled?: boolean;
     }
-
-
-    interface ProgressBarComponent extends React.ComponentClass<ProgressBarProps> {}
-    export declare const ProgressBar: ProgressBarComponent;
-
-
-
-
+interface zz_ProgressBarComponent extends React.ComponentClass<ProgressBarProps> {}
+declare const ProgressBar: zz_ProgressBarComponent;
 
     export interface QuoteProps {
         /**
@@ -296,43 +186,21 @@ declare module '@telia/styleguide' {
          */
         source: string;
     }
+interface zz_QuoteComponent extends React.ComponentClass<QuoteProps> {}
+declare const Quote: zz_QuoteComponent;
 
+interface zz_ShadowBoxComponent extends React.ComponentClass {}
+declare const ShadowBox: zz_ShadowBoxComponent;
 
-    interface QuoteComponent extends React.ComponentClass<QuoteProps> {}
-    export declare const Quote: QuoteComponent;
-
-
-
-
-
-
-    interface ShadowBoxComponent extends React.ComponentClass {}
-    export declare const ShadowBox: ShadowBoxComponent;
-
-
-
-
-
-
-    interface SpecialMessageComponent extends React.ComponentClass {}
-    export declare const SpecialMessage: SpecialMessageComponent;
-
-
-
-
+interface zz_SpecialMessageComponent extends React.ComponentClass {}
+declare const SpecialMessage: zz_SpecialMessageComponent;
 
     export interface SpinnerProps {
         className?: string;
         type?: string;
     }
-
-
-    interface SpinnerComponent extends React.ComponentClass<SpinnerProps> {}
-    export declare const Spinner: SpinnerComponent;
-
-
-
-
+interface zz_SpinnerComponent extends React.ComponentClass<SpinnerProps> {}
+declare const Spinner: zz_SpinnerComponent;
 
     export interface StepIndicatorProps {
         /**
@@ -344,19 +212,11 @@ declare module '@telia/styleguide' {
          */
         numberOfSteps?: number;
     }
+interface zz_StepIndicatorComponent extends React.ComponentClass<StepIndicatorProps> {}
+declare const StepIndicator: zz_StepIndicatorComponent;
 
-
-    interface StepIndicatorComponent extends React.ComponentClass<StepIndicatorProps> {}
-    export declare const StepIndicator: StepIndicatorComponent;
-
-
-
-
-
-    export type TagsChildren = any | any[];
-
-    export type TagsColor = "dark-grey";
-
+    type TagsChildren = any | any[];
+    type TagsColor = "dark-grey";
     export interface TagsProps {
         /**
          * Additional classes
@@ -371,14 +231,8 @@ declare module '@telia/styleguide' {
          */
         color?: TagsColor;
     }
-
-
-    interface TagsComponent extends React.ComponentClass<TagsProps> {}
-    export declare const Tags: TagsComponent;
-
-
-
-
+interface zz_TagsComponent extends React.ComponentClass<TagsProps> {}
+declare const Tags: zz_TagsComponent;
 
     export interface TelephoneNumberLinkProps {
         /**
@@ -386,14 +240,8 @@ declare module '@telia/styleguide' {
          */
         children: string;
     }
-
-
-    interface TelephoneNumberLinkComponent extends React.ComponentClass<TelephoneNumberLinkProps> {}
-    export declare const TelephoneNumberLink: TelephoneNumberLinkComponent;
-
-
-
-
+interface zz_TelephoneNumberLinkComponent extends React.ComponentClass<TelephoneNumberLinkProps> {}
+declare const TelephoneNumberLink: zz_TelephoneNumberLinkComponent;
 
     export interface TextAreaProps {
         /**
@@ -401,14 +249,8 @@ declare module '@telia/styleguide' {
          */
         error?: boolean;
     }
-
-
-    interface TextAreaComponent extends React.ComponentClass<TextAreaProps> {}
-    export declare const TextArea: TextAreaComponent;
-
-
-
-
+interface zz_TextAreaComponent extends React.ComponentClass<TextAreaProps> {}
+declare const TextArea: zz_TextAreaComponent;
 
     export interface ToggleButtonProps {
         id: string;
@@ -416,14 +258,8 @@ declare module '@telia/styleguide' {
         checked?: boolean;
         descriptionText?: string;
     }
-
-
-    interface ToggleButtonComponent extends React.ComponentClass<ToggleButtonProps> {}
-    export declare const ToggleButton: ToggleButtonComponent;
-
-
-
-
+interface zz_ToggleButtonComponent extends React.ComponentClass<ToggleButtonProps> {}
+declare const ToggleButton: zz_ToggleButtonComponent;
 
     export interface ToggleSwitchProps {
         active?: any;
@@ -432,14 +268,8 @@ declare module '@telia/styleguide' {
         leftOnClickHandler?: (...args: any[])=>any;
         rightOnClickHandler?: (...args: any[])=>any;
     }
-
-
-    interface ToggleSwitchComponent extends React.ComponentClass<ToggleSwitchProps> {}
-    export declare const ToggleSwitch: ToggleSwitchComponent;
-
-
-
-
+interface zz_ToggleSwitchComponent extends React.ComponentClass<ToggleSwitchProps> {}
+declare const ToggleSwitch: zz_ToggleSwitchComponent;
 
     export interface UniqueSellingPointsProps {
         /**
@@ -447,46 +277,25 @@ declare module '@telia/styleguide' {
          */
         children?: React.ReactNode;
     }
-
-
-    interface UniqueSellingPointsComponent extends React.ComponentClass<UniqueSellingPointsProps> {}
-    export declare const UniqueSellingPoints: UniqueSellingPointsComponent;
-
-
-
-
+interface zz_UniqueSellingPointsComponent extends React.ComponentClass<UniqueSellingPointsProps> {}
+declare const UniqueSellingPoints: zz_UniqueSellingPointsComponent;
 
     export interface AccordionProps {
     }
-
     export class Accordion extends React.Component<AccordionProps, any> {
         render(): JSX.Element;
-
     }
-
-
-
-
     export interface AccordionListProps {
     }
-
     export class AccordionList extends React.Component<AccordionListProps, any> {
         render(): JSX.Element;
-
     }
-
-
-
-
-    export type AlertKind = "positive" | "negative" | "info" | "warning";
-
-    export type AlertSize = "large";
-
+    type AlertKind = "positive" | "negative" | "info" | "warning";
+    type AlertSize = "large";
     export interface AlertLinks {
         text?: string;
         url?: string;
     }
-
     export interface AlertProps {
         kind?: AlertKind;
         size?: AlertSize;
@@ -496,26 +305,14 @@ declare module '@telia/styleguide' {
         minimizedText?: string;
         links?: AlertLinks[];
     }
-
-
-    interface AlertComponent extends React.ComponentClass<AlertProps> {}
-    export declare const Alert: AlertComponent;
-
-
-
-
+interface zz_AlertComponent extends React.ComponentClass<AlertProps> {}
+declare const Alert: zz_AlertComponent;
 
     export interface StatefulAlertProps {
     }
-
     export class StatefulAlert extends React.Component<StatefulAlertProps, any> {
         render(): JSX.Element;
-
     }
-
-
-
-
     export interface ArticleMetaDataProps {
         /**
          * Source of icon to use.
@@ -534,14 +331,8 @@ declare module '@telia/styleguide' {
          */
         author: string;
     }
-
-
-    interface ArticleMetaDataComponent extends React.ComponentClass<ArticleMetaDataProps> {}
-    export declare const ArticleMetaData: ArticleMetaDataComponent;
-
-
-
-
+interface zz_ArticleMetaDataComponent extends React.ComponentClass<ArticleMetaDataProps> {}
+declare const ArticleMetaData: zz_ArticleMetaDataComponent;
 
     export interface BelowTheLineOfferProps {
         /**
@@ -573,22 +364,11 @@ declare module '@telia/styleguide' {
          */
         className?: string;
     }
-
     export class BelowTheLineOffer extends React.Component<BelowTheLineOfferProps, any> {
         render(): JSX.Element;
-
     }
-
-
-
-
-
-    interface BoxGridComponent extends React.ComponentClass {}
-    export declare const BoxGrid: BoxGridComponent;
-
-
-
-
+interface zz_BoxGridComponent extends React.ComponentClass {}
+declare const BoxGrid: zz_BoxGridComponent;
 
     export interface CampaignProps {
         headingText: React.ReactNode;
@@ -601,14 +381,8 @@ declare module '@telia/styleguide' {
         isUsingWhiteContentBox?: boolean;
         children?: React.ReactNode;
     }
-
-
-    interface CampaignComponent extends React.ComponentClass<CampaignProps> {}
-    export declare const Campaign: CampaignComponent;
-
-
-
-
+interface zz_CampaignComponent extends React.ComponentClass<CampaignProps> {}
+declare const Campaign: zz_CampaignComponent;
 
     export interface ChartLegendSeries {
         title: string;
@@ -616,26 +390,14 @@ declare module '@telia/styleguide' {
         value: number;
         total: number;
     }
-
     export interface ChartLegendProps {
         series?: ChartLegendSeries[];
     }
+interface zz_ChartLegendComponent extends React.ComponentClass<ChartLegendProps> {}
+declare const ChartLegend: zz_ChartLegendComponent;
 
-
-    interface ChartLegendComponent extends React.ComponentClass<ChartLegendProps> {}
-    export declare const ChartLegend: ChartLegendComponent;
-
-
-
-
-
-
-    interface CheckBoxWithLabelComponent extends React.ComponentClass {}
-    export declare const CheckBoxWithLabel: CheckBoxWithLabelComponent;
-
-
-
-
+interface zz_CheckBoxWithLabelComponent extends React.ComponentClass {}
+declare const CheckBoxWithLabel: zz_CheckBoxWithLabelComponent;
 
     export interface DataBoostChartProps {
         loading?: boolean;
@@ -645,73 +407,35 @@ declare module '@telia/styleguide' {
         lowerCaption?: string;
         link?: string;
     }
+interface zz_DataBoostChartComponent extends React.ComponentClass<DataBoostChartProps> {}
+declare const DataBoostChart: zz_DataBoostChartComponent;
 
+interface zz_ChartSegmentComponent extends React.ComponentClass {}
+declare const ChartSegment: zz_ChartSegmentComponent;
 
-    interface DataBoostChartComponent extends React.ComponentClass<DataBoostChartProps> {}
-    export declare const DataBoostChart: DataBoostChartComponent;
+interface zz_ChartSegmentArcComponent extends React.ComponentClass {}
+declare const ChartSegmentArc: zz_ChartSegmentArcComponent;
 
+interface zz_ChartSegmentEndCapComponent extends React.ComponentClass {}
+declare const ChartSegmentEndCap: zz_ChartSegmentEndCapComponent;
 
+interface zz_ChartSegmentSeparatorComponent extends React.ComponentClass {}
+declare const ChartSegmentSeparator: zz_ChartSegmentSeparatorComponent;
 
+interface zz_ChartSegmentStartCapComponent extends React.ComponentClass {}
+declare const ChartSegmentStartCap: zz_ChartSegmentStartCapComponent;
 
-
-
-    interface ChartSegmentComponent extends React.ComponentClass {}
-    export declare const ChartSegment: ChartSegmentComponent;
-
-
-
-
-
-
-    interface ChartSegmentArcComponent extends React.ComponentClass {}
-    export declare const ChartSegmentArc: ChartSegmentArcComponent;
-
-
-
-
-
-
-    interface ChartSegmentEndCapComponent extends React.ComponentClass {}
-    export declare const ChartSegmentEndCap: ChartSegmentEndCapComponent;
-
-
-
-
-
-
-    interface ChartSegmentSeparatorComponent extends React.ComponentClass {}
-    export declare const ChartSegmentSeparator: ChartSegmentSeparatorComponent;
-
-
-
-
-
-
-    interface ChartSegmentStartCapComponent extends React.ComponentClass {}
-    export declare const ChartSegmentStartCap: ChartSegmentStartCapComponent;
-
-
-
-
-
-
-    interface ChartWrapperComponent extends React.ComponentClass {}
-    export declare const ChartWrapper: ChartWrapperComponent;
-
-
-
-
+interface zz_ChartWrapperComponent extends React.ComponentClass {}
+declare const ChartWrapper: zz_ChartWrapperComponent;
 
     export interface DonutChartSegments {
         percent?: any;
         color: string;
     }
-
     export interface DonutChartThresholds {
         to: number;
         type: string;
     }
-
     export interface DonutChartProps {
         loading?: boolean;
         size?: number;
@@ -724,14 +448,8 @@ declare module '@telia/styleguide' {
         radius?: number;
         strokeWidthInPercents?: number;
     }
-
-
-    interface DonutChartComponent extends React.ComponentClass<DonutChartProps> {}
-    export declare const DonutChart: DonutChartComponent;
-
-
-
-
+interface zz_DonutChartComponent extends React.ComponentClass<DonutChartProps> {}
+declare const DonutChart: zz_DonutChartComponent;
 
     export interface DownloadButtonsProps {
         /**
@@ -739,26 +457,14 @@ declare module '@telia/styleguide' {
          */
         children?: React.ReactNode;
     }
-
-
-    interface DownloadButtonsComponent extends React.ComponentClass<DownloadButtonsProps> {}
-    export declare const DownloadButtons: DownloadButtonsComponent;
-
-
-
-
+interface zz_DownloadButtonsComponent extends React.ComponentClass<DownloadButtonsProps> {}
+declare const DownloadButtons: zz_DownloadButtonsComponent;
 
     export interface DropDownListWithLabelProps {
     }
-
     export class DropDownListWithLabel extends React.Component<DropDownListWithLabelProps, any> {
         render(): JSX.Element;
-
     }
-
-
-
-
     export interface FactBoxProps {
         /**
          * Text about the fact.
@@ -781,110 +487,52 @@ declare module '@telia/styleguide' {
          */
         iconSrc?: string;
     }
+interface zz_FactBoxComponent extends React.ComponentClass<FactBoxProps> {}
+declare const FactBox: zz_FactBoxComponent;
 
-
-    interface FactBoxComponent extends React.ComponentClass<FactBoxProps> {}
-    export declare const FactBox: FactBoxComponent;
-
-
-
-
-
-
-    interface FocusBoxComponent extends React.ComponentClass {}
-    export declare const FocusBox: FocusBoxComponent;
-
-
-
-
+interface zz_FocusBoxComponent extends React.ComponentClass {}
+declare const FocusBox: zz_FocusBoxComponent;
 
     export interface FocusHeaderProps {
         title: string;
     }
+interface zz_FocusHeaderComponent extends React.ComponentClass<FocusHeaderProps> {}
+declare const FocusHeader: zz_FocusHeaderComponent;
 
-
-    interface FocusHeaderComponent extends React.ComponentClass<FocusHeaderProps> {}
-    export declare const FocusHeader: FocusHeaderComponent;
-
-
-
-
-
-
-    interface FocusSpinnerComponent extends React.ComponentClass {}
-    export declare const FocusSpinner: FocusSpinnerComponent;
-
-
-
-
+interface zz_FocusSpinnerComponent extends React.ComponentClass {}
+declare const FocusSpinner: zz_FocusSpinnerComponent;
 
     export interface FullWidthImageProps {
     }
-
-
-    interface FullWidthImageComponent extends React.ComponentClass<FullWidthImageProps> {}
-    export declare const FullWidthImage: FullWidthImageComponent;
-
-
-
-
+interface zz_FullWidthImageComponent extends React.ComponentClass<FullWidthImageProps> {}
+declare const FullWidthImage: zz_FullWidthImageComponent;
 
     export interface FunkyTabsProps {
         selectedIndex?: number;
         onSelect?: (...args: any[])=>any;
     }
+interface zz_FunkyTabsComponent extends React.ComponentClass<FunkyTabsProps> {}
+declare const FunkyTabs: zz_FunkyTabsComponent;
 
+interface zz_HardwareProductComponent extends React.ComponentClass {}
+declare const HardwareProduct: zz_HardwareProductComponent;
 
-    interface FunkyTabsComponent extends React.ComponentClass<FunkyTabsProps> {}
-    export declare const FunkyTabs: FunkyTabsComponent;
+interface zz_HeaderComponent extends React.ComponentClass {}
+declare const Header: zz_HeaderComponent;
 
+interface zz_HeaderWithImageComponent extends React.ComponentClass {}
+declare const HeaderWithImage: zz_HeaderWithImageComponent;
 
-
-
-
-
-    interface HardwareProductComponent extends React.ComponentClass {}
-    export declare const HardwareProduct: HardwareProductComponent;
-
-
-
-
-
-
-    interface HeaderComponent extends React.ComponentClass {}
-    export declare const Header: HeaderComponent;
-
-
-
-
-
-
-    interface HeaderWithImageComponent extends React.ComponentClass {}
-    export declare const HeaderWithImage: HeaderWithImageComponent;
-
-
-
-
-
-
-    interface HeadingLinkComponent extends React.ComponentClass {}
-    export declare const HeadingLink: HeadingLinkComponent;
-
-
-
-
+interface zz_HeadingLinkComponent extends React.ComponentClass {}
+declare const HeadingLink: zz_HeadingLinkComponent;
 
     export interface HeroSources {
         type?: "mobile" | "desktop";
         srcSet?: string;
     }
-
-    export type HeroPebbles = "easter" | "black-friday" | "variant-1" | "variant-2" | "variant-3" | "variant-4";
-
-    export type HeroMode = "mobile" | "desktop";
-
-    export type HeroAlign = "top" | "bottom";
-
+    type HeroPebbles = "easter" | "black-friday" | "variant-1" | "variant-2" | "variant-3" | "variant-4";
+    type HeroMode = "mobile" | "desktop";
+    type HeroAlign = "top" | "bottom";
     export interface HeroProps {
         heading: string;
         subheading: string;
@@ -906,41 +554,21 @@ declare module '@telia/styleguide' {
          */
         align?: HeroAlign;
     }
+interface zz_HeroComponent extends React.ComponentClass<HeroProps> {}
+declare const Hero: zz_HeroComponent;
 
-
-    interface HeroComponent extends React.ComponentClass<HeroProps> {}
-    export declare const Hero: HeroComponent;
-
-
-
-
-
-    export type ImageInline = "left" | "right";
-
+    type ImageInline = "left" | "right";
     export interface ImageProps {
         inline?: ImageInline;
     }
+interface zz_ImageComponent extends React.ComponentClass<ImageProps> {}
+declare const Image: zz_ImageComponent;
 
+interface zz_ImageHeadingLinkComponent extends React.ComponentClass {}
+declare const ImageHeadingLink: zz_ImageHeadingLinkComponent;
 
-    interface ImageComponent extends React.ComponentClass<ImageProps> {}
-    export declare const Image: ImageComponent;
-
-
-
-
-
-
-    interface ImageHeadingLinkComponent extends React.ComponentClass {}
-    export declare const ImageHeadingLink: ImageHeadingLinkComponent;
-
-
-
-
-
-    export type ListWithImageImagePosition = "top" | "bottom";
-
-    export type ListWithImageListPosition = "left" | "right";
-
+    type ListWithImageImagePosition = "top" | "bottom";
+    type ListWithImageListPosition = "left" | "right";
     export interface ListWithImageProps {
         /**
          * ListWithImage.Item
@@ -962,53 +590,29 @@ declare module '@telia/styleguide' {
          */
         hideImageForMobile?: boolean;
     }
+interface zz_ListWithImageComponent extends React.ComponentClass<ListWithImageProps> {}
+declare const ListWithImage: zz_ListWithImageComponent;
 
+interface zz_ModalDialogComponent extends React.ComponentClass {}
+declare const ModalDialog: zz_ModalDialogComponent;
 
-    interface ListWithImageComponent extends React.ComponentClass<ListWithImageProps> {}
-    export declare const ListWithImage: ListWithImageComponent;
-
-
-
-
-
-
-    interface ModalDialogComponent extends React.ComponentClass {}
-    export declare const ModalDialog: ModalDialogComponent;
-
-
-
-
-
-
-    interface ModalDialogOverlayComponent extends React.ComponentClass {}
-    export declare const ModalDialogOverlay: ModalDialogOverlayComponent;
-
-
-
-
+interface zz_ModalDialogOverlayComponent extends React.ComponentClass {}
+declare const ModalDialogOverlay: zz_ModalDialogOverlayComponent;
 
     export interface PageFooterLinks {
         text: string;
         url: string;
     }
-
     export interface PageFooterSpecialLink {
         text: string;
         url: string;
     }
-
     export interface PageFooterProps {
         links?: PageFooterLinks[];
         specialLink?: PageFooterSpecialLink;
     }
-
-
-    interface PageFooterComponent extends React.ComponentClass<PageFooterProps> {}
-    export declare const PageFooter: PageFooterComponent;
-
-
-
-
+interface zz_PageFooterComponent extends React.ComponentClass<PageFooterProps> {}
+declare const PageFooter: zz_PageFooterComponent;
 
     export interface PageHeaderProps {
         menuLinks: any[];
@@ -1021,100 +625,43 @@ declare module '@telia/styleguide' {
         logoImageDesktopPath: string;
         logoImageDesktopPathInverted: string;
     }
-
     export class PageHeader extends React.Component<PageHeaderProps, any> {
         render(): JSX.Element;
-
     }
+interface zz_MenuBarComponent extends React.ComponentClass {}
+declare const MenuBar: zz_MenuBarComponent;
 
+interface zz_MenuItemComponent extends React.ComponentClass {}
+declare const MenuItem: zz_MenuItemComponent;
 
+interface zz_MenuOverlayComponent extends React.ComponentClass {}
+declare const MenuOverlay: zz_MenuOverlayComponent;
 
+interface zz_MenuTopPanelComponent extends React.ComponentClass {}
+declare const MenuTopPanel: zz_MenuTopPanelComponent;
 
+interface zz_PageMenuComponent extends React.ComponentClass {}
+declare const PageMenu: zz_PageMenuComponent;
 
-    interface MenuBarComponent extends React.ComponentClass {}
-    export declare const MenuBar: MenuBarComponent;
+interface zz_PersonBoxComponent extends React.ComponentClass {}
+declare const PersonBox: zz_PersonBoxComponent;
 
+interface zz_PopUpLineComponent extends React.ComponentClass {}
+declare const PopUpLine: zz_PopUpLineComponent;
 
+interface zz_PriceTableComponent extends React.ComponentClass {}
+declare const PriceTable: zz_PriceTableComponent;
 
+interface zz_ProductListComponent extends React.ComponentClass {}
+declare const ProductList: zz_ProductListComponent;
 
-
-
-    interface MenuItemComponent extends React.ComponentClass {}
-    export declare const MenuItem: MenuItemComponent;
-
-
-
-
-
-
-    interface MenuOverlayComponent extends React.ComponentClass {}
-    export declare const MenuOverlay: MenuOverlayComponent;
-
-
-
-
-
-
-    interface MenuTopPanelComponent extends React.ComponentClass {}
-    export declare const MenuTopPanel: MenuTopPanelComponent;
-
-
-
-
-
-
-    interface PageMenuComponent extends React.ComponentClass {}
-    export declare const PageMenu: PageMenuComponent;
-
-
-
-
-
-
-    interface PersonBoxComponent extends React.ComponentClass {}
-    export declare const PersonBox: PersonBoxComponent;
-
-
-
-
-
-
-    interface PopUpLineComponent extends React.ComponentClass {}
-    export declare const PopUpLine: PopUpLineComponent;
-
-
-
-
-
-
-    interface PriceTableComponent extends React.ComponentClass {}
-    export declare const PriceTable: PriceTableComponent;
-
-
-
-
-
-
-    interface ProductListComponent extends React.ComponentClass {}
-    export declare const ProductList: ProductListComponent;
-
-
-
-
-
-
-    interface ProductPromoBoxComponent extends React.ComponentClass {}
-    export declare const ProductPromoBox: ProductPromoBoxComponent;
-
-
-
-
+interface zz_ProductPromoBoxComponent extends React.ComponentClass {}
+declare const ProductPromoBox: zz_ProductPromoBoxComponent;
 
     export interface ProgressChartThresholds {
         to: number;
         type: string;
     }
-
     export interface ProgressChartProps {
         loading?: boolean;
         loadingCaption?: string;
@@ -1123,51 +670,24 @@ declare module '@telia/styleguide' {
         valueCaption?: string;
         thresholds?: ProgressChartThresholds[];
     }
+interface zz_ProgressChartComponent extends React.ComponentClass<ProgressChartProps> {}
+declare const ProgressChart: zz_ProgressChartComponent;
 
+interface zz_RadioButtonListComponent extends React.ComponentClass {}
+declare const RadioButtonList: zz_RadioButtonListComponent;
 
-    interface ProgressChartComponent extends React.ComponentClass<ProgressChartProps> {}
-    export declare const ProgressChart: ProgressChartComponent;
+interface zz_RadioButtonWithLabelComponent extends React.ComponentClass {}
+declare const RadioButtonWithLabel: zz_RadioButtonWithLabelComponent;
 
-
-
-
-
-
-    interface RadioButtonListComponent extends React.ComponentClass {}
-    export declare const RadioButtonList: RadioButtonListComponent;
-
-
-
-
-
-
-    interface RadioButtonWithLabelComponent extends React.ComponentClass {}
-    export declare const RadioButtonWithLabel: RadioButtonWithLabelComponent;
-
-
-
-
-
-
-    interface RecommendedProductsComponent extends React.ComponentClass {}
-    export declare const RecommendedProducts: RecommendedProductsComponent;
-
-
-
-
+interface zz_RecommendedProductsComponent extends React.ComponentClass {}
+declare const RecommendedProducts: zz_RecommendedProductsComponent;
 
     export interface ReferencesProps {
         heading: string;
         items: Object[];
     }
-
-
-    interface ReferencesComponent extends React.ComponentClass<ReferencesProps> {}
-    export declare const References: ReferencesComponent;
-
-
-
-
+interface zz_ReferencesComponent extends React.ComponentClass<ReferencesProps> {}
+declare const References: zz_ReferencesComponent;
 
     export interface RelatedArticleProps {
         /**
@@ -1188,26 +708,14 @@ declare module '@telia/styleguide' {
          */
         children?: React.ReactNode;
     }
-
-
-    interface RelatedArticleComponent extends React.ComponentClass<RelatedArticleProps> {}
-    export declare const RelatedArticle: RelatedArticleComponent;
-
-
-
-
+interface zz_RelatedArticleComponent extends React.ComponentClass<RelatedArticleProps> {}
+declare const RelatedArticle: zz_RelatedArticleComponent;
 
     export interface RelatedArticlesProps {
     }
-
     export class RelatedArticles extends React.Component<RelatedArticlesProps, any> {
         render(): JSX.Element;
-
     }
-
-
-
-
     export interface StepByStepProps {
         /**
          * StepByStep.Step
@@ -1226,143 +734,65 @@ declare module '@telia/styleguide' {
          */
         onSelect?: (...args: any[])=>any;
     }
-
     export class StepByStep extends React.Component<StepByStepProps, any> {
         render(): JSX.Element;
-
     }
-
-
-
-
     export interface SubscriptionProps {
     }
-
     export class Subscription extends React.Component<SubscriptionProps, any> {
         render(): JSX.Element;
-
     }
-
-
-
-
     export interface TabsProps {
         uniqueId?: string;
         selectedIndex?: number;
         onSelect?: (...args: any[])=>any;
     }
+interface zz_TabsComponent extends React.ComponentClass<TabsProps> {}
+declare const Tabs: zz_TabsComponent;
 
+interface zz_TextAreaWithLabelComponent extends React.ComponentClass {}
+declare const TextAreaWithLabel: zz_TextAreaWithLabelComponent;
 
-    interface TabsComponent extends React.ComponentClass<TabsProps> {}
-    export declare const Tabs: TabsComponent;
+interface zz_TextBoxWithLabelComponent extends React.ComponentClass {}
+declare const TextBoxWithLabel: zz_TextBoxWithLabelComponent;
 
+interface zz_TooltipComponent extends React.ComponentClass {}
+declare const Tooltip: zz_TooltipComponent;
 
-
-
-
-
-    interface TextAreaWithLabelComponent extends React.ComponentClass {}
-    export declare const TextAreaWithLabel: TextAreaWithLabelComponent;
-
-
-
-
-
-
-    interface TextBoxWithLabelComponent extends React.ComponentClass {}
-    export declare const TextBoxWithLabel: TextBoxWithLabelComponent;
-
-
-
-
-
-
-    interface TooltipComponent extends React.ComponentClass {}
-    export declare const Tooltip: TooltipComponent;
-
-
-
-
-
-
-    interface UserDashboardComponent extends React.ComponentClass {}
-    export declare const UserDashboard: UserDashboardComponent;
-
-
-
-
+interface zz_UserDashboardComponent extends React.ComponentClass {}
+declare const UserDashboard: zz_UserDashboardComponent;
 
     export interface VideoProps {
         src?: string;
         allowFullScreen?: boolean;
     }
-
-
-    interface VideoComponent extends React.ComponentClass<VideoProps> {}
-    export declare const Video: VideoComponent;
-
-
-
-
+interface zz_VideoComponent extends React.ComponentClass<VideoProps> {}
+declare const Video: zz_VideoComponent;
 
     export interface ContentRatingProps {
     }
-
     export class ContentRating extends React.Component<ContentRatingProps, any> {
         render(): JSX.Element;
-
     }
-
-
-
-
     export interface FocusSubscriptionProps {
     }
-
     export class FocusSubscription extends React.Component<FocusSubscriptionProps, any> {
         render(): JSX.Element;
-
     }
+interface zz_FormComponent extends React.ComponentClass {}
+declare const Form: zz_FormComponent;
 
+interface zz_HardwareProductListComponent extends React.ComponentClass {}
+declare const HardwareProductList: zz_HardwareProductListComponent;
 
+interface zz_ThemeBoxComponent extends React.ComponentClass {}
+declare const ThemeBox: zz_ThemeBoxComponent;
 
+interface zz_ThemeBoxesComponent extends React.ComponentClass {}
+declare const ThemeBoxes: zz_ThemeBoxesComponent;
 
-
-    interface FormComponent extends React.ComponentClass {}
-    export declare const Form: FormComponent;
-
-
-
-
-
-
-    interface HardwareProductListComponent extends React.ComponentClass {}
-    export declare const HardwareProductList: HardwareProductListComponent;
-
-
-
-
-
-
-    interface ThemeBoxComponent extends React.ComponentClass {}
-    export declare const ThemeBox: ThemeBoxComponent;
-
-
-
-
-
-
-    interface ThemeBoxesComponent extends React.ComponentClass {}
-    export declare const ThemeBoxes: ThemeBoxesComponent;
-
-
-
-
-
-
-    interface ThemeBoxWithImageComponent extends React.ComponentClass {}
-    export declare const ThemeBoxWithImage: ThemeBoxWithImageComponent;
-
+interface zz_ThemeBoxWithImageComponent extends React.ComponentClass {}
+declare const ThemeBoxWithImage: zz_ThemeBoxWithImageComponent;
 
 
 }
