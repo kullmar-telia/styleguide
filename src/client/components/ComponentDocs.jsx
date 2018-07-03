@@ -42,7 +42,11 @@ class ComponentDocs extends Component {
                         {doc.props && (
                             _.keys(doc.props).sort((a, b) => a.localeCompare(b)).map(key => this.getPropsDocsRow(key, doc.props[key]))
                         )}
-                        {doc.composes[0].properties.sort((a, b) => a.name.localeCompare(b.name)).map(property => this.getPropsDocsRowFromCompose(property))}
+                        {doc.composes[0].properties && (
+                            doc.composes[0].properties
+                                .sort((a, b) => a.name.localeCompare(b.name))
+                                .map(property => this.getPropsDocsRowFromCompose(property))
+                        )}
                     </tbody>
                 </table>
             </div>

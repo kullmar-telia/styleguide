@@ -15,7 +15,7 @@ const NumberBoxes = ({ children, className, ...rest }) => (
     </ul>
 );
 
-NumberBoxes.NumberBox = ({ title, number, unit, text, className, test = 'defaultValue', ...rest }) => (
+NumberBoxes.NumberBox = ({ title, number, unit, text, className, test = 'defaultValue', test3, test4, ...rest }) => (
     <li
         className={classnames('number-box', {
             [className]: className
@@ -45,6 +45,18 @@ NumberBoxes.NumberBox.propTypes = {
     unit: PropTypes.string,
     /** A short descriptive text. */
     text: PropTypes.string,
+    test: PropTypes.oneOf([
+        'defaultValue', 'anotherValue'
+    ]),
+    test4: PropTypes.oneOfType([
+        PropTypes.shape({
+            test2: PropTypes.string
+        })
+    ]),
+    test3: PropTypes.shape({
+        test2: PropTypes.string,
+        test4: PropTypes.number,
+    })
 };
 
 export default NumberBoxes;

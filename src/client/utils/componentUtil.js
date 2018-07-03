@@ -12,19 +12,46 @@ function getMemberName(path) {
     return `${_.get(path, 'parentPath.node.left.object.name')}.${_.get(path, 'parentPath.node.left.property.name')}`;
 }
 
+function getTypeFromNode(node, value) {
+    switch (node.type) {
+    case 'Property':
+        return node.value.property.name;
+    case 'Literal':
+        return node.raw;
+    case 'MemberExpression':
+        switch (node.property.name) {
+        case 'oneOfType':
+        case 'oneOf':
+            return value.arguments[0].elements.map(it => getTypeFromNode(it, value)).join(' | ');
+        case 'shape':
+            return `{${value.arguments[0].properties.map(it => getTypeFromNode(it, value)).join(', ')}}`;
+        default:
+            return getTypeFromNode(node.property, value);
+        }
+    case 'CallExpression':
+        return getTypeFromNode(node.callee.property, node);
+    case 'Identifier':
+        switch (node.name) {
+        case 'shape':
+            return `{${value.arguments[0].properties.map(it => getTypeFromNode(it, value)).join(', ')}}`;
+        default:
+            return node.name;
+        }
+    }
+}
+
 function getTypeFromProperty(property) {
     const name = _.get(property, 'key.name');
     const comments = _.get(property, 'comments') || [];
     const simpleType = _.get(property, 'value.property.name');
+    const base = { name, comments };
     if (simpleType) {
-        return { name, comments, type: simpleType };
+        return { type: simpleType, ...base };
     }
-    const complexType = _.get(property, 'value.callee.property');
-    // const innerType = _.get(property, 'value.arguments[0].elements');
+    const complexType = _.get(property, 'value.callee.property.name');
     if (complexType) {
-        return { name, comments, type: complexType };
+        return { type: getTypeFromNode(_.get(property, 'value.callee'), property.value), ...base };
     }
-    return 'TODO: more complex type';
 }
 
 const parserCustomHandler = (documentation, path) => {
@@ -47,28 +74,12 @@ const parserCustomHandler = (documentation, path) => {
                     return null;
                 }
                 const type = propType.type;
-                const comment = propType.comments.map(it => it.replace(/^\*/, '')).join('\n');
-                // const propertyName = utils.getPropertyName(it)
-                // propertyName
-                // const propDescriptor = documentation.getPropDescriptor(propertyName)
-                // const valuePath = propertyPath.get('value')
+                const comment = propType.comments.map(it => it.value.replace(/^\*/, '')).join('\n');
                 return {
                     name, defaultValue, type, comment
                 };
             })
             .filter(it => it);
-        if (componentName.startsWith('NumberBoxes')) {
-            // console.log(componentName);
-            // console.log(properties);
-            // console.log(path);
-            // console.log(documentation);
-            // console.log(path)
-            // const componentExpression = _.get(path, 'parentPath.parentPath.parentPath.value').find(it => it.type === 'ExpressionStatement' && componentName.endsWith(_.get(it, 'expression.left.object.property.name')));
-            // console.log(componentExpression);
-            // const types = componentExpression.expression.right.properties.map(getTypeFromProperty);
-            // console.log(types);
-            console.log(properties);
-        }
         documentation.addComposes({ componentName, properties });
     } else {
         documentation.addComposes({ componentName });
