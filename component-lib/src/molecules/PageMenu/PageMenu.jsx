@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
+import { preventDefault } from '../../utils';
 import MenuOverlay from './MenuOverlay';
 import MenuTopPanel from './MenuTopPanel';
 import MenuBar from './MenuBar';
 import Button from '../../atoms/Button/Button';
-import Heading from '../../atoms/Heading/Heading';
 import Tabs from '../../molecules/Tabs/Tabs';
 
 const PageMenu = ({
@@ -19,9 +19,9 @@ const PageMenu = ({
     menuSelectedTabIndex,
     onTabSelect,
     showButtons,
-    logoutLink,
+    logoutLink = '#',
     onLogoutClick,
-    loginLink,
+    loginLink = '#',
     onLoginClick
 }) => {
     const showTabs = menuLinks.find(it => it.heading);
@@ -75,8 +75,7 @@ const PageMenu = ({
                     <ul className="page-menu__item-list">
                         <li className="page-menu__item">
                             <div className="page-menu__item-link">
-                                <a className="page-menu__log-out-button link" href={logoutLink} onClick={onLogoutClick}>Logg
-                                    ut</a>
+                                <a className="page-menu__log-out-button link" href={logoutLink} onClick={preventDefault(onLogoutClick)}>Logg ut</a>
                             </div>
                         </li>
                     </ul>}

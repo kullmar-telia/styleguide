@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { preventDefault } from '../../utils';
 import PageMenu from '../PageMenu/PageMenu';
 
 /**
@@ -29,6 +30,10 @@ export default class PageHeader extends React.Component {
         onLoginClick: PropTypes.func,
         logoutLink: PropTypes.string,
         onLogoutClick: PropTypes.func,
+    };
+    static defaultProps = {
+        loginLink: '#',
+        logoutLink: '#',
     };
     constructor(props) {
         super(props);
@@ -90,7 +95,7 @@ export default class PageHeader extends React.Component {
                             <span className="page-header__cart-item-count">{this.props.cartItemCount}</span>
                         </a> : null}
                     {!this.props.isLoggedIn &&
-                        <a className="page-header__log-in-button" href={this.props.loginLink} onClick={this.props.onLoginClick} >
+                        <a className="page-header__log-in-button" href={this.props.loginLink} onClick={preventDefault(this.props.onLoginClick)} >
                             <i className="page-header__log-in-button-icon page-header__icon-box-icon" />
                             <span className="page-header__log-in-button-text">Logg inn</span>
                         </a>}
